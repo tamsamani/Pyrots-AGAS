@@ -1,4 +1,7 @@
 {
   "presets": ["next/babel"],
-  "plugins": ["@babel/plugin-proposal-do-expressions"]
+  "plugins": [
+    "@babel/plugin-proposal-decorators",
+    "@babel/plugin-proposal-do-expressions"
+  ]
 }
