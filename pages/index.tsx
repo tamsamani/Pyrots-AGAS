@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from 'next/link';
 
 const MainPage = () => {
   
@@ -13,6 +14,8 @@ const MainPage = () => {
       }</b>
     </p>
     <button className="px-4 py-2 bg-blue-500 text-white" onClick={toggleSwitch} >Switch</button>
+
+    <Link href="/stories" ><a><button  className="px-4 py-2 bg-green-500 text-white" >go to here</button></a></Link>
   </div>;
 };
 

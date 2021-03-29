@@ -10,6 +10,7 @@
     "prisma:push": "npx prisma db push --preview-feature",
     "prisma:migrate":"npx prisma migrate deploy",
     "prisma:generate": "npx prisma generate",
+    "prisma:studio":"npx prisma studio",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

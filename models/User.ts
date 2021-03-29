@@ -1,15 +1,20 @@
+import { PrismaClient } from '@prisma/client';
 
-import { DBEntity, setName, DBSYMBOL_TABLE_NAME } from "./_db";
+import { PrismaModel } from "_utils";
 
+const prisma = new PrismaClient()
 
-@setName("user")
-class User extends DBEntity {
-  firstName: string;
-  lastName: string;
-
-  email: string;
-  
-
+async function getUsers (userModel, options) {
+  return await userModel.findMany();
 }
+
+async function createUser(userModel, userData, options) {
+  return await userModel.create({ data: userData });
+}
+
+const User = new PrismaModel("user", {
+  all : getUsers,
+  create: createUser
+});
 
 export default User;
