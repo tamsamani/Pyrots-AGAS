@@ -7,10 +7,11 @@
     "build": "next build",
     "start": "next start",
     "prisma:init": "npx prisma init",
+    "prisma:resolve": "npx prisma migrate resolve",
+    "prisma:migrate": "npx prisma migrate deploy",
     "prisma:push": "npx prisma db push --preview-feature",
-    "prisma:migrate":"npx prisma migrate deploy",
     "prisma:generate": "npx prisma generate",
-    "prisma:studio":"npx prisma studio",
+    "prisma:studio": "npx prisma studio",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -21,21 +22,22 @@
   "author": "tamsamani <tamsmoha@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "2.19.0",
-    "next": "^10.0.9",
+    "@prisma/client": "^2.20.1",
+    "next": "^10.1.2",
+    "next-auth": "^3.13.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.13",
+    "@babel/core": "^7.13.14",
     "@babel/plugin-proposal-decorators": "^7.13.5",
     "@babel/plugin-proposal-do-expressions": "^7.12.13",
-    "@tailwindcss/jit": "^0.1.12",
+    "@tailwindcss/jit": "^0.1.18",
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.8",
-    "prisma": "2.19.0",
+    "prisma": "^2.20.1",
     "sass": "^1.32.8",
     "tailwindcss": "^2.0.4",
     "typescript": "^4.2.3"

@@ -1,5 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from 'next/link';
+
+import Button from '../components/Button';
 
 const MainPage = () => {
   
@@ -9,13 +11,10 @@ const MainPage = () => {
 
   return <div>
     <h3 className="text-red-500" >I love You NextJs!</h3>
-    <p>the state is <b>{
-        (switchState) ? 'Active' : 'Inactive'
-      }</b>
-    </p>
-    <button className="px-4 py-2 bg-blue-500 text-white" onClick={toggleSwitch} >Switch</button>
+    <p>the state is <b>{(switchState) ? 'Active' : 'Inactive'}</b></p>
+    <Button color='blue' className="ms-1" onClick={toggleSwitch} >Switch</Button>
 
-    <Link href="/stories" ><a><button  className="px-4 py-2 bg-green-500 text-white" >go to here</button></a></Link>
+    <Link href="/stories" ><a><Button className="" >go to here</Button></a></Link>
   </div>;
 };
 

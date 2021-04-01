@@ -1,8 +1,4 @@
-import { PrismaClient } from '@prisma/client';
-
-import { PrismaModel } from "_utils";
-
-const prisma = new PrismaClient()
+import { PrismaModel } from "./_utils";
 
 async function getUsers (userModel, options) {
   return await userModel.findMany();
