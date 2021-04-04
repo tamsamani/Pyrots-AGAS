@@ -1,3 +1,5 @@
+/// <reference types="@prisma/client" />
+
 /** string that's represented as Number */
 type numberString = string;
 
@@ -9,3 +11,15 @@ type DBType_Int = number | numberString;
 
 /** the Date type representation by database */
 type DBType_Date = Date | number | dateString;
+
+// STORY TYPES
+
+interface Novel {
+  name: string;
+  authors: Author[];
+  books: Book[];
+
+  
+
+
+}
